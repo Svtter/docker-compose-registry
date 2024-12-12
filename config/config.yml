@@ -8,7 +8,7 @@ storage:
   filesystem:
     rootdirectory: /var/lib/registry
 http:
-  addr: :5000
+  addr: 0.0.0.0:5000
   headers:
     X-Content-Type-Options: [nosniff]
 health:
@@ -16,9 +16,12 @@ health:
     enabled: true
     interval: 10s
     threshold: 3
-proxy:
-  remoteurl: https://registry-1.docker.io
+# proxy:
+  # remoteurl: https://registry-1.docker.io
   # username: [username]
   # password: [password]
-#auth:
-#  false
+  
+# auth:
+  # htpasswd:
+  # realm: basic-realm
+  # path: /etc/nginx/htpasswd
