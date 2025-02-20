@@ -4,6 +4,14 @@
 
 ![Oyster registry](https://www.docker.com/sites/default/files/oyster-registry-3.png)
 
+## Crontab
+
+Add to crontab.
+
+```
+0 0 * * * cd /path/to/your/registry/directory && /usr/bin/python3 check_and_stop_registry.py >> /path/to/your/registry/directory/cron.log 2>&1
+```
+
 ## Concept
 
 - Create a Docker registry cache for local network to speed up docker image download and keep a lower bandwidth.
@@ -16,7 +24,7 @@ Clone this repo:
 ```bash
 $ git clone git@github.com:maxmasetti/docker-compose-registry.git registry
 ```
-or 
+or
 
 ```bash
 $ git clone https://github.com/maxmasetti/docker-compose-registry.git registry
@@ -121,7 +129,7 @@ services:
     #- "MIRROR_SOURCE=https://registry-1.docker.io"
     #- "MIRROR_SOURCE_INDEX=https://index.docker.io"
 ```
- 
+
 ### Registry configuration (server)
 
 `/etc/docker/registry/config.yml`:
