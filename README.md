@@ -96,6 +96,8 @@ The images downloaded will be stored in the server `data` folder and listed in t
 ## TBD
 Secure the registry implementing ssl (https) on port 5000.
 
+- Add auth by [nginx](https://distribution.github.io/distribution/recipes/nginx/).
+
 ## Some description
 
 ### Docker-compose file (server)
